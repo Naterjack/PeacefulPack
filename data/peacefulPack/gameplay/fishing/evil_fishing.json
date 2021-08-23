@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+      {
+        "rolls": 1.0,
+        "bonus_rolls": 0.0,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "weight": 20,
+            "name": "minecraft:nether_star"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 20,
+            "name": "minecraft:wither_skeleton_skull"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 80,
+            "name": "minecraft:coal"
+          }
+        ]
+      }
+    ]
+  }

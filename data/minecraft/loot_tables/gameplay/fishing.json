@@ -1,0 +1,173 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 10,
+          "quality": -4,
+          "name": "minecraft:gameplay/fishing/junk"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "conditions": [
+            {
+              "condition": "minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "predicate": {
+                    "fishing_hook": {
+                      "in_open_water": true
+                    }
+                  },
+                  "entity": "this"
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "minecraft:fishing_rod"
+                    ],
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:lure",
+                        "levels": 3
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "minecraft:fishing_rod"
+                    ],
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:lure",
+                        "levels": 4
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "minecraft:fishing_rod"
+                    ],
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:lure",
+                        "levels": 5
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 5,
+          "quality": 4,
+          "name": "minecraft:gameplay/fishing/treasure"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 85,
+          "quality": -20,
+          "name": "minecraft:gameplay/fishing/fish"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "conditions":[
+            {
+              "condition":"minecraft:alternative",
+              "terms": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "location": {
+                      "position": {
+                        "y": {
+                          "min": 0,
+                          "max": 100
+                        }
+                      },
+                      "feature": "monument"
+                    }
+                  }
+                },
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "stepping_on": {
+                      "position": {
+                        "y": {
+                          "min": 0,
+                          "max": -3
+                        }
+                      },
+                      "block": {
+                        "blocks": [
+                          "minecraft:prismarine"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "weight": 100,
+          "quality": 4,
+          "name": "peacefulPack:gameplay/fishing/prismarine" 
+        },
+        {
+          "type": "minecraft:loot_table",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "fishing_hook": {
+                  "in_open_water": true
+                }
+              }
+            },
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "minecraft:fishing_rod"
+                ],
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:luck_of_the_sea",
+                    "levels": 666
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:time_check",
+              "value": {
+                "min": 12542,
+                "max": 23460
+              },
+              "period": 24000
+            }
+          ],
+          "weight": 10000,
+          "quality": 100,
+          "name": "peacefulPack:gameplay/fishing/evil_fishing"
+        }        
+      ]
+    }
+  ]
+}
