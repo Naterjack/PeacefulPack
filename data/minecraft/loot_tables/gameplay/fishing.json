@@ -126,7 +126,7 @@
           ],
           "weight": 100,
           "quality": 4,
-          "name": "peacefulPack:gameplay/fishing/prismarine" 
+          "name": "peacefulpack:gameplay/fishing/prismarine" 
         },
         {
           "type": "minecraft:loot_table",
@@ -165,7 +165,7 @@
           ],
           "weight": 10000,
           "quality": 100,
-          "name": "peacefulPack:gameplay/fishing/evil_fishing"
+          "name": "peacefulpack:gameplay/fishing/evil_fishing"
         }        
       ]
     }
